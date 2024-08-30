@@ -6,7 +6,7 @@
 
 function generateRandomCharacter() {
 	let character = {};
-	console.log(document.getElementById('skinColorDropdown').value)
+	console.log(document.getElementById('skinColorDropdown').value);
 	selectedSkinColor = document.getElementById('skinColorDropdown').value;
 	character.randomCategory = getRandomType(selectedSkinColor);
 	character.randomType = character.randomCategory['Volksname'];
@@ -49,7 +49,9 @@ function generateRandomCharacter() {
 			character.skinColorHex = getRandomElement(skinColorBlack);
 			break;
 		default:
-			character.skinColorHex = getRandomElement(skinColorBrown); // Fallback
+			console.error('Ungültige Hautfarbe: ' + character.randomSkinColor);
+
+		// character.skinColorHex = getRandomElement(skinColorBrown); // Fallback
 	}
 
 	switch (character.randomEyeColor) {
@@ -88,8 +90,14 @@ function generateRandomCharacter() {
 		case 'Staub':
 			character.hairColorHex = getRandomElement(hairColorDust);
 			break;
+		case 'Hellbraun':
+			character.hairColorHex = getRandomElement(hairColorLightBrown);
+			break;
 		case 'Braun':
 			character.hairColorHex = getRandomElement(hairColorBrown);
+			break;
+		case 'Dunkelbraun':
+			character.hairColorHex = getRandomElement(hairColorDarkBrown);
 			break;
 		case 'Rostrot':
 			character.hairColorHex = getRandomElement(hairColorBrownAuburn);
@@ -113,7 +121,9 @@ function generateRandomCharacter() {
 			character.hairColorHex = getRandomElement(hairColorGrey);
 			break;
 		default:
-			character.hairColorHex = getRandomElement(hairColorBlack); // Fallback
+			console.error('Ungültige Haarfarbe: ' + character.randomHairColor);
+
+		// character.hairColorHex = getRandomElement(hairColorBlack); // Fallback
 	}
 
 	switch (character.randomHairStructure) {
