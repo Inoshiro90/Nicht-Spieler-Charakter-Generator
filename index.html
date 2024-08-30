@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<title>Buchtitelgenerator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<!-- Popper.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>
+			<b>
+				Nicht-Spieler-Charakter-Generator
+			</b>
+		</h1>
+		<p>
+			Dieser Generator generiert Nicht-Spieler-Charaktere
+		</p>
+		<!-- Filter: Aussehen -->
+		<button class="text-left btn btn-secondary btn-block mb-1" data-toggle="collapse" data-target="#appearance">
+			Filter: Aussehen
+		</button>
+		<div id="appearance" class="rounded content collapse mb-2 p-2 bg-light">
+			<label class="checkbox-label">
+				<input type="checkbox" id="checkbox-appearance-placeholder" class="checkbox-appearance" checked />
+				Platzhalter
+			</label>
+			<br />
+			<button class="btn btn-secondary inCollapsible mb-2" id="btn-select-all-appearance">
+				Alle auswählen
+			</button>
+			<button class="btn btn-secondary inCollapsible mb-2" id="btn-deselect-all-appearance">
+				Alle abwählen
+			</button>
+
+			<div class="form-group">
+				<label for="skinColorDropdown"><b>Hautfarbe:</b></label>
+				<select class="form-control small-dropdown" id="skinColorDropdown">
+					<option id="random">Zufall</option>
+					<option id="pale">Blass</option>
+					<option id="white">Weiß</option>
+					<option id="lightBrown">Hellbraun</option>
+					<option id="brown">Braun</option>
+					<option id="darkBrown">Dunkelbraun</option>
+					<option id="black">Schwarz</option>
+				</select>
+			</div>
+		</div>
+
+		<!-- Filter: Fähigkeiten -->
+		<button class="text-left btn btn-secondary btn-block mb-1" data-toggle="collapse" data-target="#skills">
+			Filter: Fähigkeiten
+		</button>
+		<div id="skills" class="rounded content collapse mb-2 p-2 bg-light">
+			<label class="checkbox-label">
+				<input type="checkbox" id="checkbox-skills-placeholder" class="checkbox-skills" checked />
+				Platzhalter
+			</label>
+			<br />
+			<button class="btn btn-secondary inCollapsible mb-2" id="btn-select-all-skills">
+				Alle auswählen
+			</button>
+			<button class="btn btn-secondary inCollapsible mb-2" id="btn-deselect-all-skills">
+				Alle abwählen
+			</button>
+		</div>
+
+		<!-- Filter: Persönlichkeit -->
+		<button class="text-left btn btn-secondary btn-block mb-1" data-toggle="collapse" data-target="#personality">
+			Filter: Persönlichkeit
+		</button>
+		<div id="personality" class="rounded content collapse mb-2 p-2 bg-light">
+			<label class="checkbox-label">
+				<input type="checkbox" id="checkbox-personality-placeholder" class="checkbox-personality" checked />
+				Platzhalter
+			</label>
+			<br />
+			<button class="btn btn-secondary inCollapsible mb-2" id="btn-select-all-personality">
+				Alle auswählen
+			</button>
+			<button class="btn btn-secondary inCollapsible mb-2" id="btn-deselect-all-personality">
+				Alle abwählen
+			</button>
+		</div>
+
+
+		<!-- Filter: Hintergrund -->
+		<button class="text-left btn btn-secondary btn-block mb-1" data-toggle="collapse" data-target="#background">
+			Filter: Hintergrund
+		</button>
+		<div id="background" class="rounded content collapse mb-2 p-2 bg-light">
+			<label class="checkbox-label">
+				<input type="checkbox" id="checkbox-background-placeholder" class="checkbox-background" checked />
+				Platzhalter
+			</label>
+			<br />
+			<button class="btn btn-secondary inCollapsible mb-2" id="btn-select-all-background">
+				Alle auswählen
+			</button>
+			<button class="btn btn-secondary inCollapsible mb-2" id="btn-deselect-all-background">
+				Alle abwählen
+			</button>
+		</div>
+
+		<!-- Filter: Rollenspiel -->
+		<button class="text-left btn btn-secondary btn-block mb-1" data-toggle="collapse" data-target="#role-play">
+			Filter: Rollenspiel
+		</button>
+		<div id="role-play" class="rounded content collapse mb-2 p-2 bg-light">
+			<label class="checkbox-label">
+				<input type="checkbox" id="checkbox-role-play-placeholder" class="checkbox-role-play" checked />
+				Platzhalter
+			</label>
+			<br />
+			<button class="btn btn-secondary inCollapsible mb-2" id="btn-select-all-role-play">
+				Alle auswählen
+			</button>
+			<button class="btn btn-secondary inCollapsible mb-2" id="btn-deselect-all-role-play">
+				Alle abwählen
+			</button>
+		</div>
+
+		<!-- Buttons for generating, copying and deleting results-->
+		<div class="row col-7">
+			<div class="buttons mt-1">
+				<button id="btn-generate" class="btn btn-secondary mt-1">
+					Generieren
+				</button>
+				<button id="btn-copy" class="btn btn-secondary mt-1">
+					Kopieren
+				</button>
+				<button id="btn-clear" class="btn btn-secondary mt-1">
+					Löschen
+				</button>
+			</div>
+		</div>
+
+		<br>
+
+		<!-- Container for the results -->
+		<h2>
+			Generierter Charakter
+		</h2>
+		<div class="container mt-4" id="container-generated-character">
+		</div>
+
+		<!-- Scroll back to top button -->
+		<button type="button" class="btn btn-secondary btn-floating btn-lg mt-1" id="btn-back-to-top">
+			<b style="font-size: 24px">^</b>
+		</button>
+
+</body>
+<script src="scripts/interface/buttonGenerate.js"></script>
+<script src="scripts/interface/getRandomElement.js"></script>
+<script src="scripts/interface/displayCharacter.js"></script>
+<script src="scripts/generateRandomCharacter.js"></script>
+<script src="scripts/appearance/eyeColor/eyeColorPalette.js"></script>
+<script src="scripts/appearance/hairColor/hairColorPalette.js"></script>
+<script src="scripts/appearance/hairLength/generateRandomHairLength.js"></script>
+<script src="scripts/appearance/hairStructure/hairStructureRange.js"></script>
+<script src="scripts/appearance/skinColor/skinColorPalette.js"></script>
+<script src="scripts/appearance/type/getRandomType.js"></script>
+<script src="scripts/appearance/type/typeRange.js"></script>
+
+</html>
