@@ -6,7 +6,7 @@
 
 function generateRandomCharacter() {
 	let character = {};
-	console.log(document.getElementById('skinColorDropdown').value);
+	// console.log(document.getElementById('skinColorDropdown').value);
 	selectedSkinColor = document.getElementById('skinColorDropdown').value;
 	character.randomCategory = getRandomType(selectedSkinColor);
 	character.randomType = character.randomCategory['Volksname'];
@@ -16,19 +16,15 @@ function generateRandomCharacter() {
 	} else {
 		character.randomSkinColor = selectedSkinColor;
 	}
-	// character.randomSkinColor = getRandomElement(skinColors[character.randomType]);
 	character.randomEyeColor = getRandomElement(eyeColors[character.randomType]);
 	character.randomHairColor = getRandomElement(hairColors[character.randomType]);
 	character.randomHairStructure = getRandomElement(hairStructures[character.randomType]);
 	character.randomHairLength = generateRandomHairLength();
 	// Hier kommt später der Aufruf für die Frisur hin
 	// const randomHairStyle = generateRandomHairStyle (randomHairStructure, randomHairLength);
+	character.randomFaceShape = getRandomFaceShape();
 
-	// let character.skinColorHex;
-	// let character.eyeColorHex;
-	// let character.hairColorHex;
-	// let character.hairStructureDescription;
-
+	//Hautfarbe
 	switch (character.randomSkinColor) {
 		case 'Blass':
 			character.skinColorHex = getRandomElement(skinColorPale);
@@ -50,10 +46,9 @@ function generateRandomCharacter() {
 			break;
 		default:
 			console.error('Ungültige Hautfarbe: ' + character.randomSkinColor);
-
-		// character.skinColorHex = getRandomElement(skinColorBrown); // Fallback
 	}
 
+	//Augenfarbe
 	switch (character.randomEyeColor) {
 		case 'Blau':
 			character.eyeColorHex = getRandomElement(eyeColorBlue); // Blue
@@ -71,9 +66,10 @@ function generateRandomCharacter() {
 			character.eyeColorHex = getRandomElement(eyeColorHazel); // Gray
 			break;
 		default:
-			character.eyeColorHex = '#000000'; // Black (fallback)
+			console.error('Ungültige Augenfarbe: ' + character.randomEyeColor);
 	}
 
+	//Haarfarbe
 	switch (character.randomHairColor) {
 		case 'Blond':
 			character.hairColorHex = getRandomElement(hairColorBlonde);
@@ -122,10 +118,9 @@ function generateRandomCharacter() {
 			break;
 		default:
 			console.error('Ungültige Haarfarbe: ' + character.randomHairColor);
-
-		// character.hairColorHex = getRandomElement(hairColorBlack); // Fallback
 	}
 
+	//Haarstruktur
 	switch (character.randomHairStructure) {
 		case 'Glatt':
 			character.hairStructureDescription = getRandomElement(hairStructureType1);
@@ -140,7 +135,7 @@ function generateRandomCharacter() {
 			character.hairStructureDescription = getRandomElement(hairStructureType4);
 			break;
 		default:
-			character.hairColorHex = getRandomElement(hairColorBlack); // Fallback
+			console.error('Ungültige Haarstruktur: ' + character.randomHairStructure);
 	}
 
 	// Code für die Frisur basierend auf Haarstruktur und Haarlänge

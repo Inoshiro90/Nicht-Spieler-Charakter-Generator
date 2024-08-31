@@ -56,9 +56,9 @@ function generateRandomHairlengthMan() {
 	hairLength = {};
 	hairLength.value = generateGaussianDistribution(meanHairLengthMen, standardDeviationMen);
 	hairLength.description = assignHairLengthName(hairLength.value);
-	console.log(
-		'Generated hair length man: ' + hairLength.value + ', Name: ' + hairLength.description
-	);
+	// console.log(
+	// 	'Generated hair length man: ' + hairLength.value + ', Name: ' + hairLength.description
+	// );
 	return hairLength;
 }
 
@@ -66,16 +66,16 @@ function generateRandomHairlengthWoman() {
 	hairLength = {};
 	hairLength.value = generateGaussianDistribution(meanHairLengthWomen, standardDeviationWomen);
 	hairLength.description = assignHairLengthName(hairLength.value);
-	console.log(
-		'Generated hair length woman: ' + hairLength.value + ', Name: ' + hairLength.description
-	);
+	// console.log(
+	// 	'Generated hair length woman: ' + hairLength.value + ', Name: ' + hairLength.description
+	// );
 	return hairLength;
 }
 
 function generateRandomHairLength() {
 	hairLength = {};
 	hairLength = generateRandomHairlengthMan();
-	console.log('Haarlänge: ' + hairLength.description);
+	// console.log('Haarlänge: ' + hairLength.description);
 	return hairLength;
 }
 // // Generierung von Haarlängen und Ausgabe für Frauen
