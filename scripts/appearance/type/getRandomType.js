@@ -29,7 +29,7 @@ function getRandomType(selectedSkinColor) {
 		const randomType = getRandomElement(typesData[randomMainCategory][randomSubCategory]['Volksname']);
 
 		// Überprüfen, ob der ausgewählte Typ die gewünschte Hautfarbe unterstützt
-		if (selectedSkinColor === 'Zufall' || skinColors[randomType].includes(mapSkinColor(selectedSkinColor))) {
+		if (selectedSkinColor === 'Zufall' || skinColors[randomType].includes(selectedSkinColor)) {
 			randomTypeData = {
 				Überkategorie: randomMainCategory,
 				Kategorie: randomSubCategory,
@@ -40,24 +40,4 @@ function getRandomType(selectedSkinColor) {
 	}
 
 	return randomTypeData;
-}
-
-function mapSkinColor(selectedSkinColor) {
-	// Mapping der Dropdown-Auswahl auf die tatsächlichen Hautfarben
-	switch (selectedSkinColor) {
-		case 'Blass':
-			return 'Blass';
-		case 'Weiß':
-			return 'Weiß';
-		case 'Hellbraun':
-			return 'Hellbraun';
-		case 'Braun':
-			return 'Braun';
-		case 'Dunkelbraun':
-			return 'Dunkelbraun';
-		case 'Schwarz':
-			return 'Schwarz';
-		default:
-			return 'Zufall';
-	}
 }

@@ -14,7 +14,7 @@ function generateRandomCharacter() {
 	if (selectedSkinColor === 'Zufall') {
 		character.randomSkinColor = getRandomElement(skinColors[character.randomType]);
 	} else {
-		character.randomSkinColor = mapSkinColor(selectedSkinColor);
+		character.randomSkinColor = selectedSkinColor;
 	}
 	// character.randomSkinColor = getRandomElement(skinColors[character.randomType]);
 	character.randomEyeColor = getRandomElement(eyeColors[character.randomType]);
