@@ -23,6 +23,7 @@ function generateRandomCharacter() {
 	// Hier kommt später der Aufruf für die Frisur hin
 	// const randomHairStyle = generateRandomHairStyle (randomHairStructure, randomHairLength);
 	character.randomFaceShape = getRandomFaceShape();
+	character.randomNoseShape = getRandomNoseShape();
 
 	//Hautfarbe
 	switch (character.randomSkinColor) {
