@@ -24,6 +24,7 @@ function generateRandomCharacter() {
 	// const randomHairStyle = generateRandomHairStyle (randomHairStructure, randomHairLength);
 	character.randomFaceShape = getRandomFaceShape();
 	character.randomNoseShape = getRandomNoseShape();
+	character.randomEyeShape = getRandomEyeShape();
 
 	//Hautfarbe
 	switch (character.randomSkinColor) {

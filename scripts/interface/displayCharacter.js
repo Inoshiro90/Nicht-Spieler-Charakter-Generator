@@ -12,6 +12,7 @@ function displayCharacter() {
 		`<b>Wangenknochen:</b> ${sentenceCase(character.randomFaceShape.cheekBones)}<br>` +
 		`<b>Kiefer:</b> ${sentenceCase(character.randomFaceShape.jaw)}<br>` +
 		`<b>Kinn:</b> ${sentenceCase(character.randomFaceShape.chin)}<br>`+
-		`<b>Nase:</b> ${character.randomNoseShape}<br>`;
+		`<b>Nase:</b> ${character.randomNoseShape}<br>` +
+		`<b>Auge:</b> ${character.randomEyeShape}<br>`;
 	container.innerHTML += htmlContent;
 }
