@@ -11,9 +11,10 @@ function displayCharacter() {
 		`<b>Stirn:</b> ${sentenceCase(character.randomFaceShape.forehead)}<br>` +
 		`<b>Wangenknochen:</b> ${sentenceCase(character.randomFaceShape.cheekBones)}<br>` +
 		`<b>Kiefer:</b> ${sentenceCase(character.randomFaceShape.jaw)}<br>` +
-		`<b>Kinn:</b> ${sentenceCase(character.randomFaceShape.chin)}<br>`+
+		`<b>Kinn:</b> ${sentenceCase(character.randomFaceShape.chin)}<br>` +
 		`<b>Nase:</b> ${character.randomNoseShape}<br>` +
-		`<b>Auge:</b> ${character.randomEyeShape}<br>` +
-		`<b>Ohr:</b> ${character.randomEarShape.ear_shape}, ${character.randomEarShape.helix}, ${character.randomEarShape.earlobe}, ${character.randomEarShape.tragus}<br>`;
+		`<b>Augen:</b> ${character.randomEyeShape}<br>` +
+		`<b>Ohren:</b> ${character.randomEarShape.ear_shape}, ${character.randomEarShape.helix}, ${character.randomEarShape.earlobe}, ${character.randomEarShape.tragus}<br>` +
+		`<b>Mund:</b> ${character.randomMouthShape}<br>`;
 	container.innerHTML += htmlContent;
 }
