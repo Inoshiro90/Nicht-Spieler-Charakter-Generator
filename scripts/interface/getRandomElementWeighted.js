@@ -1,0 +1,14 @@
+function getRandomElementWeighted(arr, weights) {
+	const cumulativeWeights = [];
+	for (let i = 0; i < weights.length; i++) {
+		cumulativeWeights[i] = weights[i] + (cumulativeWeights[i - 1] || 0);
+	}
+
+	const random = Math.random() * cumulativeWeights[cumulativeWeights.length - 1];
+
+	for (let i = 0; i < cumulativeWeights.length; i++) {
+		if (random < cumulativeWeights[i]) {
+			return arr[i];
+		}
+	}
+}

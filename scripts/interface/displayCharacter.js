@@ -13,6 +13,7 @@ function displayCharacter() {
 		`<b>Kiefer:</b> ${sentenceCase(character.randomFaceShape.jaw)}<br>` +
 		`<b>Kinn:</b> ${sentenceCase(character.randomFaceShape.chin)}<br>`+
 		`<b>Nase:</b> ${character.randomNoseShape}<br>` +
-		`<b>Auge:</b> ${character.randomEyeShape}<br>`;
+		`<b>Auge:</b> ${character.randomEyeShape}<br>` +
+		`<b>Ohr:</b> ${character.randomEarShape.ear_shape}, ${character.randomEarShape.helix}, ${character.randomEarShape.earlobe}, ${character.randomEarShape.tragus}<br>`;
 	container.innerHTML += htmlContent;
 }

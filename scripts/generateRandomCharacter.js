@@ -25,6 +25,7 @@ function generateRandomCharacter() {
 	character.randomFaceShape = getRandomFaceShape();
 	character.randomNoseShape = getRandomNoseShape();
 	character.randomEyeShape = getRandomEyeShape();
+	character.randomEarShape = getRandomEarShape();
 
 	//Hautfarbe
 	switch (character.randomSkinColor) {
