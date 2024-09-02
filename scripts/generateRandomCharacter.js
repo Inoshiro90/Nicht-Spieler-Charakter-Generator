@@ -14,6 +14,13 @@ function generateRandomCharacter() {
 		character.randomGender = selectedGender;
 	}
 
+	selectedRace = document.getElementById('raceDropdown').value;
+	if (selectedRace === 'Zufall') {
+		character.randomRace = getRandomRace();
+	} else {
+		character.randomRace = selectedRace;
+	}
+
 	selectedSkinColor = document.getElementById('skinColorDropdown').value;
 	character.randomCategory = getRandomType(selectedSkinColor);
 	character.randomType = character.randomCategory['Volksname'];

@@ -43,6 +43,21 @@
 				Alle abwählen
 			</button>
 			<div class="form-group">
+				<label for="raceDropdown"><b>Volk:</b></label>
+				<select class="form-control small-dropdown" id="raceDropdown">
+					<option id="random">Zufall</option>
+					<option id="human">Mensch</option>
+					<option id="dwarf">Zwerg</option>
+					<option id="elf">Elf</option>
+					<option id="halfling">Halbling</option>
+					<option id="gnome">Gnom</option>
+					<option id="halfElf">Halbelf</option>
+					<option id="halfOrc">Halbork</option>
+					<option id="dragonborn">Drachenblütiger</option>
+					<option id="tiefling">Tiefling</option>
+				</select>
+			</div>
+			<div class="form-group">
 				<label for="genderDropdown"><b>Geschlecht:</b></label>
 				<select class="form-control small-dropdown" id="genderDropdown">
 					<option id="random">Zufall</option>
@@ -176,6 +191,7 @@
 
 <script src="scripts/generateRandomCharacter.js"></script>
 <script src="scripts/appearance/gender/getRandomGender.js"></script>
+<script src="scripts/appearance/race/getRandomRace.js"></script>
 <script src="scripts/appearance/eyeColor/eyeColorPalette.js"></script>
 <script src="scripts/appearance/hairColor/hairColorPalette.js"></script>
 <script src="scripts/appearance/hairLength/generateRandomHairLength.js"></script>
