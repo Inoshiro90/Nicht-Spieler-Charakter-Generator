@@ -30,6 +30,14 @@ function generateRandomCharacter() {
 	} else {
 		character.randomSkinColor = selectedSkinColor;
 	}
+
+	selectedPhysique = document.getElementById('physiqueDropdown').value;
+	if (selectedPhysique === 'Zufall') {
+		character.randomPhysique = getRandomPhysique();
+	} else {
+		character.randomPhysique = getRandomPhysique(selectedPhysique);
+	}
+
 	character.randomEyeColor = getRandomElement(eyeColors[character.randomType]);
 	character.randomHairColor = getRandomElement(hairColors[character.randomType]);
 	character.randomHairStructure = getRandomElement(hairStructures[character.randomType]);
