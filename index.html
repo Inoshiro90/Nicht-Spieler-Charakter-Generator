@@ -42,7 +42,15 @@
 			<button class="btn btn-secondary inCollapsible mb-2" id="btn-deselect-all-appearance">
 				Alle abwählen
 			</button>
-
+			<div class="form-group">
+				<label for="genderDropdown"><b>Geschlecht:</b></label>
+				<select class="form-control small-dropdown" id="genderDropdown">
+					<option id="random">Zufall</option>
+					<option id="male">Männlich</option>
+					<option id="female">Weiblich</option>
+					<option id="non-binary">Nicht-binär</option>
+				</select>
+			</div>
 			<div class="form-group">
 				<label for="skinColorDropdown"><b>Hautfarbe:</b></label>
 				<select class="form-control small-dropdown" id="skinColorDropdown">
@@ -167,7 +175,7 @@
 <script src="scripts/interface/sentenceCase.js"></script>
 
 <script src="scripts/generateRandomCharacter.js"></script>
-
+<script src="scripts/appearance/gender/getRandomGender.js"></script>
 <script src="scripts/appearance/eyeColor/eyeColorPalette.js"></script>
 <script src="scripts/appearance/hairColor/hairColorPalette.js"></script>
 <script src="scripts/appearance/hairLength/generateRandomHairLength.js"></script>
@@ -180,4 +188,5 @@
 <script src="scripts/appearance/eyeShape/getRandomEyeShape.js"></script>
 <script src="scripts/appearance/earShape/getRandomEarShape.js"></script>
 <script src="scripts/appearance/mouthShape/getRandomMouthShape.js"></script>
+
 </html>

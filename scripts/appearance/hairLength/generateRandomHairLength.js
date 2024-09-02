@@ -72,9 +72,23 @@ function generateRandomHairlengthWoman() {
 	return hairLength;
 }
 
-function generateRandomHairLength() {
-	hairLength = {};
-	hairLength = generateRandomHairlengthMan();
+function generateRandomHairLength(gender) {
+	switch (gender) {
+		case 'Männlich':
+			hairLength = generateRandomHairlengthMan();
+			break;
+		case 'Weiblich':
+			hairLength = generateRandomHairlengthWoman();
+			break;
+		case 'Nicht-binär':
+			hairLength = getRandomElement([
+				generateRandomHairlengthMan(),
+				generateRandomHairlengthWoman(),
+			]);
+			break;
+		default:
+			console.error('Ungültiges Geschlecht: ' + gender);
+	}
 	// console.log('Haarlänge: ' + hairLength.description);
 	return hairLength;
 }

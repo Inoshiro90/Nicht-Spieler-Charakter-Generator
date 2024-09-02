@@ -7,6 +7,13 @@
 function generateRandomCharacter() {
 	let character = {};
 	// console.log(document.getElementById('skinColorDropdown').value);
+	selectedGender = document.getElementById('genderDropdown').value;
+	if (selectedGender === 'Zufall') {
+		character.randomGender = getRandomGender();
+	} else {
+		character.randomGender = selectedGender;
+	}
+
 	selectedSkinColor = document.getElementById('skinColorDropdown').value;
 	character.randomCategory = getRandomType(selectedSkinColor);
 	character.randomType = character.randomCategory['Volksname'];
@@ -19,7 +26,7 @@ function generateRandomCharacter() {
 	character.randomEyeColor = getRandomElement(eyeColors[character.randomType]);
 	character.randomHairColor = getRandomElement(hairColors[character.randomType]);
 	character.randomHairStructure = getRandomElement(hairStructures[character.randomType]);
-	character.randomHairLength = generateRandomHairLength();
+	character.randomHairLength = generateRandomHairLength(character.randomGender);
 	// Hier kommt später der Aufruf für die Frisur hin
 	// const randomHairStyle = generateRandomHairStyle (randomHairStructure, randomHairLength);
 	character.randomFaceShape = getRandomFaceShape();
