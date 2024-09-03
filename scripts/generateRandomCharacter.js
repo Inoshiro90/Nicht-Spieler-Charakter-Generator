@@ -50,25 +50,229 @@ function generateRandomCharacter() {
 	character.randomEarShape = getRandomEarShape();
 	character.randomMouthShape = getRandomMouthShape();
 
-	//Hautfarbe
+	// Hautfarbe
 	switch (character.randomSkinColor) {
 		case 'Blass':
-			character.skinColorHex = getRandomElement(skinColorPale);
+			switch (character.randomRace) {
+				case 'Elf':
+				case 'Halbelf':
+					character.skinColorHex = getRandomElement([
+						...skinColorPaleElf,
+						...skinColorPale,
+					]);
+					break;
+				case 'Gnom':
+					character.skinColorHex = getRandomElement([
+						...skinColorPaleGnome,
+						...skinColorPale,
+					]);
+					break;
+				case 'Halbork':
+					character.skinColorHex = getRandomElement([
+						...skinColorPaleOrc,
+						...skinColorPale,
+					]);
+					break;
+				case 'Drachenblütiger':
+					character.skinColorHex = getRandomElement([
+						...skinColorPaleDragonborn,
+						...skinColorPale,
+					]);
+					break;
+				case 'Tiefling':
+					character.skinColorHex = getRandomElement([
+						...skinColorPaleTiefling,
+						...skinColorPale,
+					]);
+					break;
+				default:
+					character.skinColorHex = getRandomElement(skinColorPale);
+			}
 			break;
 		case 'Weiß':
-			character.skinColorHex = getRandomElement(skinColorWhite);
+			switch (character.randomRace) {
+				case 'Elf':
+				case 'Halbelf':
+					character.skinColorHex = getRandomElement([
+						...skinColorWhiteElf,
+						...skinColorWhite,
+					]);
+					break;
+				case 'Gnom':
+					character.skinColorHex = getRandomElement([
+						...skinColorWhiteGnome,
+						...skinColorWhite,
+					]);
+					break;
+				case 'Halbork':
+					character.skinColorHex = getRandomElement([
+						...skinColorWhiteOrc,
+						...skinColorWhite,
+					]);
+					break;
+				case 'Drachenblütiger':
+					character.skinColorHex = getRandomElement([
+						...skinColorWhiteDragonborn,
+						...skinColorWhite,
+					]);
+					break;
+				case 'Tiefling':
+					character.skinColorHex = getRandomElement([
+						...skinColorWhiteTiefling,
+						...skinColorWhite,
+					]);
+					break;
+				default:
+					character.skinColorHex = getRandomElement(skinColorWhite);
+			}
 			break;
 		case 'Hellbraun':
-			character.skinColorHex = getRandomElement(skinColorLightBrown);
+			switch (character.randomRace) {
+				case 'Elf':
+				case 'Halbelf':
+					character.skinColorHex = getRandomElement([
+						...skinColorLightBrownElf,
+						...skinColorLightBrown,
+					]);
+					break;
+				case 'Gnom':
+					character.skinColorHex = getRandomElement([
+						...skinColorLightBrownGnome,
+						...skinColorLightBrown,
+					]);
+					break;
+				case 'Halbork':
+					character.skinColorHex = getRandomElement([
+						...skinColorLightBrownOrc,
+						...skinColorLightBrown,
+					]);
+					break;
+				case 'Drachenblütiger':
+					character.skinColorHex = getRandomElement([
+						...skinColorLightBrownDragonborn,
+						...skinColorLightBrown,
+					]);
+					break;
+				case 'Tiefling':
+					character.skinColorHex = getRandomElement([
+						...skinColorLightBrownTiefling,
+						...skinColorLightBrown,
+					]);
+					break;
+				default:
+					character.skinColorHex = getRandomElement(skinColorLightBrown);
+			}
 			break;
 		case 'Braun':
-			character.skinColorHex = getRandomElement(skinColorBrown);
+			switch (character.randomRace) {
+				case 'Elf':
+				case 'Halbelf':
+					character.skinColorHex = getRandomElement([
+						...skinColorBrownElf,
+						...skinColorBrown,
+					]);
+					break;
+				case 'Gnom':
+					character.skinColorHex = getRandomElement([
+						...skinColorBrownGnome,
+						...skinColorBrown,
+					]);
+					break;
+				case 'Halbork':
+					character.skinColorHex = getRandomElement([
+						...skinColorBrownOrc,
+						...skinColorBrown,
+					]);
+					break;
+				case 'Drachenblütiger':
+					character.skinColorHex = getRandomElement([
+						...skinColorBrownDragonborn,
+						...skinColorBrown,
+					]);
+					break;
+				case 'Tiefling':
+					character.skinColorHex = getRandomElement([
+						...skinColorBrownTiefling,
+						...skinColorBrown,
+					]);
+					break;
+				default:
+					character.skinColorHex = getRandomElement(skinColorBrown);
+			}
 			break;
 		case 'Dunkelbraun':
-			character.skinColorHex = getRandomElement(skinColorDarkBrown);
+			switch (character.randomRace) {
+				case 'Elf':
+				case 'Halbelf':
+					character.skinColorHex = getRandomElement([
+						...skinColorDarkBrownElf,
+						...skinColorDarkBrown,
+					]);
+					break;
+				case 'Gnom':
+					character.skinColorHex = getRandomElement([
+						...skinColorDarkBrownGnome,
+						...skinColorDarkBrown,
+					]);
+					break;
+				case 'Halbork':
+					character.skinColorHex = getRandomElement([
+						...skinColorDarkBrownOrc,
+						...skinColorDarkBrown,
+					]);
+					break;
+				case 'Drachenblütiger':
+					character.skinColorHex = getRandomElement([
+						...skinColorDarkBrownDragonborn,
+						...skinColorDarkBrown,
+					]);
+					break;
+				case 'Tiefling':
+					character.skinColorHex = getRandomElement([
+						...skinColorDarkBrownTiefling,
+						...skinColorDarkBrown,
+					]);
+					break;
+				default:
+					character.skinColorHex = getRandomElement(skinColorDarkBrown);
+			}
 			break;
 		case 'Schwarz':
-			character.skinColorHex = getRandomElement(skinColorBlack);
+			switch (character.randomRace) {
+				case 'Elf':
+				case 'Halbelf':
+					character.skinColorHex = getRandomElement([
+						...skinColorBlackElf,
+						...skinColorBlack,
+					]);
+					break;
+				case 'Gnom':
+					character.skinColorHex = getRandomElement([
+						...skinColorBlackGnome,
+						...skinColorBlack,
+					]);
+					break;
+				case 'Halbork':
+					character.skinColorHex = getRandomElement([
+						...skinColorBlackOrc,
+						...skinColorBlack,
+					]);
+					break;
+				case 'Drachenblütiger':
+					character.skinColorHex = getRandomElement([
+						...skinColorBlackDragonborn,
+						...skinColorBlack,
+					]);
+					break;
+				case 'Tiefling':
+					character.skinColorHex = getRandomElement([
+						...skinColorBlackTiefling,
+						...skinColorBlack,
+					]);
+					break;
+				default:
+					character.skinColorHex = getRandomElement(skinColorBlack);
+			}
 			break;
 		default:
 			console.error('Ungültige Hautfarbe: ' + character.randomSkinColor);
@@ -77,19 +281,19 @@ function generateRandomCharacter() {
 	//Augenfarbe
 	switch (character.randomEyeColor) {
 		case 'Blau':
-			character.eyeColorHex = getRandomElement(eyeColorBlue); // Blue
+			character.eyeColorHex = getRandomElement(eyeColorBlue);
 			break;
 		case 'Grün':
-			character.eyeColorHex = getRandomElement(eyeColorGreen); // Green
+			character.eyeColorHex = getRandomElement(eyeColorGreen);
 			break;
 		case 'Grau':
-			character.eyeColorHex = getRandomElement(eyeColorGrey); // Gray
+			character.eyeColorHex = getRandomElement(eyeColorGrey);
 			break;
 		case 'Braun':
-			character.eyeColorHex = getRandomElement(eyeColorBrown); // Gray
+			character.eyeColorHex = getRandomElement(eyeColorBrown);
 			break;
 		case 'Haselnuss':
-			character.eyeColorHex = getRandomElement(eyeColorHazel); // Gray
+			character.eyeColorHex = getRandomElement(eyeColorHazel);
 			break;
 		default:
 			console.error('Ungültige Augenfarbe: ' + character.randomEyeColor);

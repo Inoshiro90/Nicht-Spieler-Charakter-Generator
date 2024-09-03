@@ -13,6 +13,44 @@ const skinColorPale = [
 	'#FFF0E6',
 	'#FFF2DB',
 ];
+const skinColorPaleElf = [
+	'#FFD8F1',
+	'#EABCD6',
+	'#D9D294',
+	'#CCBF7A',
+	'#C9D2D4',
+	'#A6B4B7',
+	'#BDC5D4',
+	'#A6AAB7',
+	'#BBB8C4',
+	'#A9A6B2',
+	'#C7BCBB',
+	'#BAA9A7',
+	'#BDAFBD',
+	'#AB9BAB',
+	'#BAA5B1',
+	'#B096A5',
+];
+const skinColorPaleGnome = [
+	'#D9D294',
+	'#CCBF7A',
+	'#C9D2D4',
+	'#A6B4B7',
+	'#BDC5D4',
+	'#A6AAB7',
+	'#BBB8C4',
+	'#A9A6B2',
+	'#C7BCBB',
+	'#BAA9A7',
+	'#BDAFBD',
+	'#AB9BAB',
+	'#BAA5B1',
+	'#B096A5',
+];
+const skinColorPaleOrc = [];
+const skinColorPaleDragonborn = [];
+const skinColorPaleTiefling = [];
+
 // ### 2: Weiß
 const skinColorWhite = [
 	'#D9B49B',
@@ -26,6 +64,76 @@ const skinColorWhite = [
 	'#FFD8CD',
 	'#FFE1CD',
 ];
+const skinColorWhiteElf = [
+	'#CEA6C4',
+	'#B590AC',
+	'#BAA667',
+	'#A38E53',
+	'#81889B',
+	'#6F798C',
+	'#8C989B',
+	'#7D8A8C',
+	'#898691',
+	'#726F7A',
+	'#9B8D8C',
+	'#827776',
+	'#968A96',
+	'#827682',
+	'#947D88',
+	'#8A707C',
+];
+const skinColorWhiteGnome = [
+	'#BAA667',
+	'#A38E53',
+	'#81889B',
+	'#6F798C',
+	'#8C989B',
+	'#7D8A8C',
+	'#898691',
+	'#726F7A',
+	'#9B8D8C',
+	'#827776',
+	'#968A96',
+	'#827682',
+	'#947D88',
+	'#8A707C',
+];
+const skinColorWhiteOrc = [
+	'#E0AA89',
+	'#D49873',
+	'#DEB892',
+	'#D4A373',
+	'#E0C790',
+	'#D4B673',
+	'#E5DC8F',
+	'#D4C973',
+	'#D7E097',
+	'#C2CC7E',
+	'#A09B93',
+	'#84817A',
+	'#C8C86D',
+	'#B5B55E',
+];
+const skinColorWhiteDragonborn = [];
+const skinColorWhiteTiefling = [
+	'#D7BFBD',
+	'#B09B9A',
+	'#F7DD94',
+	'#E3BD67',
+	'#FFBA93',
+	'#ED9C7A',
+	'#FFA293',
+	'#EA8474',
+	'#FFBFC7',
+	'#E5939D',
+	'#FFBFDE',
+	'#D992B6',
+	'#CED4FC',
+	'#9FA5CE',
+	'#BEC0D4',
+	'#9AA7BF',
+];
+
 // ### 3: Hellbraun
 const skinColorLightBrown = [
 	'#AB8E81',
@@ -38,6 +146,75 @@ const skinColorLightBrown = [
 	'#D4B081',
 	'#D99065',
 	'#EAA87A',
+];
+const skinColorLightBrownElf = [
+	'#997492',
+	'#876380',
+	'#917745',
+	'#846C3D',
+	'#60677D',
+	'#53556B',
+	'#6F7D7F',
+	'#5E696B',
+	'#65616E',
+	'#54515C',
+	'#665F5F',
+	'#544F53',
+	'#6E636E',
+	'#615661',
+	'#735F69',
+	'#63505A',
+];
+const skinColorLightBrownGnome = [
+	'#917745',
+	'#846C3D',
+	'#60677D',
+	'#53556B',
+	'#6F7D7F',
+	'#5E696B',
+	'#65616E',
+	'#54515C',
+	'#665F5F',
+	'#544F53',
+	'#6E636E',
+	'#615661',
+	'#735F69',
+	'#63505A',
+];
+const skinColorLightBrownOrc = [
+	'#B77B57',
+	'#A16543',
+	'#BF8E5E',
+	'#A37445',
+	'#B79854',
+	'#A88945',
+	'#BDB15B',
+	'#A69A45',
+	'#A1A865',
+	'#919955',
+	'#727069',
+	'#67645F',
+	'#95954E',
+	'#7D7D40',
+];
+const skinColorLightBrownDragonborn = [];
+const skinColorLightBrownTiefling = [
+	'#9A8281',
+	'#756464',
+	'#D4973C',
+	'#BF8134',
+	'#CE7153',
+	'#B24F38',
+	'#CE6960',
+	'#B74A47',
+	'#D6707D',
+	'#C2505F',
+	'#C770A1',
+	'#A35481',
+	'#8189BA',
+	'#62659E',
+	'#7F8FAD',
+	'#637496',
 ];
 // ### 4: Braun
 const skinColorBrown = [
@@ -52,6 +229,75 @@ const skinColorBrown = [
 	'#B58C59',
 	'#C27950',
 ];
+const skinColorBrownElf = [
+	'#75576F',
+	'#63485E',
+	'#755E35',
+	'#614C28',
+	'#474759',
+	'#3A3D4A',
+	'#4A5254',
+	'#3F484A',
+	'#4A4751',
+	'#403E47',
+	'#4B464C',
+	'#413D42',
+	'#4C444C',
+	'#453C45',
+	'#54444C',
+	'#4A3940',
+];
+const skinColorBrownGnome = [
+	'#755E35',
+	'#614C28',
+	'#474759',
+	'#3A3D4A',
+	'#4A5254',
+	'#3F484A',
+	'#4A4751',
+	'#403E47',
+	'#4B464C',
+	'#413D42',
+	'#4C444C',
+	'#453C45',
+	'#54444C',
+	'#4A3940',
+];
+const skinColorBrownOrc = [
+	'#915836',
+	'#7F4929',
+	'#916437',
+	'#7F552A',
+	'#917639',
+	'#7D642B',
+	'#8C8135',
+	'#736927',
+	'#71783C',
+	'#606633',
+	'#595651',
+	'#4F4C48',
+	'#656531',
+	'#4B4B22',
+];
+const skinColorBrownDragonborn = [];
+const skinColorBrownTiefling = [
+	'#655856',
+	'#534746',
+	'#A86520',
+	'#915118',
+	'#A13C28',
+	'#7D2E1A',
+	'#A33431',
+	'#8F272A',
+	'#A33D4B',
+	'#912C3A',
+	'#944371',
+	'#7F3760',
+	'#4B4C84',
+	'#3D3E75',
+	'#53617D',
+	'#435066',
+];
 // ### 5: Dunkelbraun
 const skinColorDarkBrown = [
 	'#63392D',
@@ -65,6 +311,45 @@ const skinColorDarkBrown = [
 	'#82573D',
 	'#945230',
 ];
+const skinColorDarkBrownElf = [
+	'#593F54',
+	'#594124',
+	'#2C2F3B',
+	'#343B3D',
+	'#36343D',
+	'#343035',
+	'#3D353D',
+	'#3D333A',
+];
+const skinColorDarkBrownGnome = [
+	'#594124',
+	'#2C2F3B',
+	'#343B3D',
+	'#36343D',
+	'#343035',
+	'#3D353D',
+	'#3D333A',
+];
+const skinColorDarkBrownOrc = [
+	'#66371C',
+	'#6E4620',
+	'#6E5722',
+	'#5E561E',
+	'#52572E',
+	'#3C3934',
+	'#3B3B13',
+];
+const skinColorDarkBrownDragonborn = [];
+const skinColorDarkBrownTiefling = [
+	'#4B3F3E',
+	'#863C0B',
+	'#6E2215',
+	'#731B1E',
+	'#78202C',
+	'#6B2B50',
+	'#30315C',
+	'#3C4357',
+];
 // ### 6: Schwarz
 const skinColorBlack = [
 	'#40231B',
@@ -77,4 +362,43 @@ const skinColorBlack = [
 	'#542F24',
 	'#573825',
 	'#61351C',
+];
+const skinColorBlackElf = [
+	'#473444',
+	'#4F391E',
+	'#1F2129',
+	'#2B3233',
+	'#28262E',
+	'#282529',
+	'#332C33',
+	'#372C33',
+];
+const skinColorBlackGnome = [
+	'#4F391E',
+	'#1F2129',
+	'#2B3233',
+	'#28262E',
+	'#282529',
+	'#332C33',
+	'#372C33',
+];
+const skinColorBlackOrc = [
+	'#4F2C18',
+	'#593819',
+	'#59461A',
+	'#4F4818',
+	'#414523',
+	'#302E2A',
+	'#29290C',
+];
+const skinColorBlackDragonborn = [];
+const skinColorBlackTiefling = [
+	'#3A2E2E',
+	'#6E320B',
+	'#5E1C10',
+	'#611719',
+	'#661A25',
+	'#572341',
+	'#232345',
+	'#2E3445',
 ];
