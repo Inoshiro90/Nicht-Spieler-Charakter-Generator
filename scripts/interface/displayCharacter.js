@@ -12,6 +12,9 @@ function displayCharacter() {
 		`<b>Augenfarbe:</b> ${character.randomEyeColor} (${character.eyeColorHex}) <span style="margin-bottom: 3pt; vertical-align: middle; display: inline-block; width: 12pt; height: 12pt; border-radius: 50%; background-color: ${character.eyeColorHex};"></span> <br>` +
 		`<b>Haare:</b> ${character.randomHairColor} (${character.hairColorHex}) <span style="margin-bottom: 3pt; vertical-align: middle; display: inline-block; width: 12pt; height: 12pt; border-radius: 50%; background-color: ${character.hairColorHex};"></span>,  ${character.hairStructureDescription}, ${character.randomHairLength.description}<br>` +
 		`<b>Stirn:</b> ${sentenceCase(character.randomFaceShape.forehead)}<br>` +
+		(character.randomRace === 'Tiefling' 
+			? `<b>Horn:</b> ${sentenceCase(character.randomTieflingHornShape)}<br>` 
+			: '') +
 		`<b>Wangenknochen:</b> ${sentenceCase(character.randomFaceShape.cheekBones)}<br>` +
 		`<b>Kiefer:</b> ${sentenceCase(character.randomFaceShape.jaw)}<br>` +
 		`<b>Kinn:</b> ${sentenceCase(character.randomFaceShape.chin)}<br>` +
