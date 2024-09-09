@@ -205,6 +205,24 @@ const skinColors = {
 	Neygofa: ['Dunkelbraun', 'Schwarz'],
 };
 
+const skinColorsOther = [
+	'Blau',
+	'Braun',
+	'Bronze',
+	'Gelb',
+	'Gold',
+	'Grün',
+	'Kupfer',
+	'Messing',
+	'Orange',
+	'Pink',
+	'Purpur',
+	'Rot',
+	'Schwarz',
+	'Silber',
+	'Weiß',
+];
+
 // Augenfarben
 const eyeColors = {
 	Felubion: ['Blau', 'Grün', 'Grau'],
@@ -265,6 +283,24 @@ const eyeColors = {
 	Neygofa: ['Braun'],
 };
 
+const eyeColorsOther = [
+	'Blau',
+	'Braun',
+	'Bronze',
+	'Gelb',
+	'Gold',
+	'Grün',
+	'Kupfer',
+	'Messing',
+	'Orange',
+	'Pink',
+	'Purpur',
+	'Rot',
+	'Schwarz',
+	'Silber',
+	'Weiß',
+];
+
 // Haarfarben
 const hairColors = {
 	Felubion: ['Blond', 'Rotblond'],
@@ -324,6 +360,25 @@ const hairColors = {
 	Banynop: ['Dunkelbraun'],
 	Neygofa: ['Schwarz'],
 };
+
+const hairColorsOther = [
+	'Blau',
+	'Braun',
+	'Bronze',
+	'Gelb',
+	'Gold',
+	'Grün',
+	'Kupfer',
+	'Messing',
+	'Orange',
+	'Pink',
+	'Purpur',
+	'Rot',
+	'Schwarz',
+	'Silber',
+	'Weiß',
+];
+
 // Haarstrukturen
 const hairStructures = {
 	Felubion: ['Glatt', 'Wellig'],

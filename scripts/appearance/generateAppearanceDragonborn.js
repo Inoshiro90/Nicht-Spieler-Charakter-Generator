@@ -1,17 +1,16 @@
 function generateAppearanceDragonborn(gender) {
 	let appearance = {};
 	appearance.randomGender = gender;
-	selectedSkinColor = document.getElementById('skinColorDropdown').value;
-
-	appearance.randomCategory = getRandomType(selectedSkinColor);
-	appearance.randomType = appearance.randomCategory['Volksname'];
+	selectedSkinColor = document.getElementById('skinColorOtherDropdown').value;
 
 	// Wenn "Zufall" ausgewählt wurde, wähle eine zufällige Hautfarbe, ansonsten nutze die ausgewählte Hautfarbe
 	if (selectedSkinColor === 'Zufall') {
-		appearance.randomSkinColor = getRandomElement(skinColors[appearance.randomType]);
+		appearance.randomSkinColor = getRandomElement(skinColorsOther);
 	} else {
 		appearance.randomSkinColor = selectedSkinColor;
 	}
+
+	// console.log('Ausgewählte Hautfarbe:', appearance.randomSkinColor);
 
 	selectedPhysique = document.getElementById('physiqueDropdown').value;
 	if (selectedPhysique === 'Zufall') {
@@ -20,336 +19,86 @@ function generateAppearanceDragonborn(gender) {
 		appearance.randomPhysique = getRandomPhysique(selectedPhysique);
 	}
 
-	appearance.randomEyeColor = getRandomElement(eyeColors[appearance.randomType]);
-	appearance.randomHairColor = getRandomElement(hairColors[appearance.randomType]);
-	appearance.randomHairStructure = getRandomElement(hairStructures[appearance.randomType]);
-	appearance.randomHairLength = generateRandomHairLength(appearance.randomGender);
+	// appearance.randomEyeColor = getRandomElement(eyeColorsOther);
 	// Hier kommt später der Aufruf für die Frisur hin
 	// const randomHairStyle = generateRandomHairStyle (randomHairStructure, randomHairLength);
-	appearance.randomFaceShape = getRandomFaceShape();
-	appearance.randomNoseShape = getRandomNoseShape();
-	appearance.randomEyeShape = getRandomEyeShape();
-	appearance.randomEarShape = getRandomEarShape();
-	appearance.randomMouthShape = getRandomMouthShape();
-	appearance.randomTieflingHornShape = getRandomElement(tieflingHornShapes);
+	// appearance.randomFaceShape = getRandomFaceShape();
+	// appearance.randomNoseShape = getRandomNoseShape();
+	// appearance.randomEyeShape = getRandomEyeShape();
+	// appearance.randomEarShape = getRandomEarShape();
+	// appearance.randomMouthShape = getRandomMouthShape();
 
 	// Hautfarbe
 	switch (appearance.randomSkinColor) {
-		case 'Blass':
-			switch (appearance.randomRace) {
-				case 'Elf':
-				case 'Halbelf':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorPaleElf,
-						...skinColorPale,
-					]);
-					break;
-				case 'Gnom':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorPaleGnome,
-						...skinColorPale,
-					]);
-					break;
-				case 'Halbork':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorPaleOrc,
-						...skinColorPale,
-					]);
-					break;
-				case 'Drachenblütiger':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorPaleDragonborn,
-						...skinColorPale,
-					]);
-					break;
-				case 'Tiefling':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorPaleTiefling,
-						...skinColorPale,
-					]);
-					break;
-				default:
-					appearance.skinColorHex = getRandomElement(skinColorPale);
-			}
+		case 'Schwarz':
+			appearance.skinColorHex = getRandomElement(skinColorOtherBlack);
 			break;
-		case 'Weiß':
-			switch (appearance.randomRace) {
-				case 'Elf':
-				case 'Halbelf':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorWhiteElf,
-						...skinColorWhite,
-					]);
-					break;
-				case 'Gnom':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorWhiteGnome,
-						...skinColorWhite,
-					]);
-					break;
-				case 'Halbork':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorWhiteOrc,
-						...skinColorWhite,
-					]);
-					break;
-				case 'Drachenblütiger':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorWhiteDragonborn,
-						...skinColorWhite,
-					]);
-					break;
-				case 'Tiefling':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorWhiteTiefling,
-						...skinColorWhite,
-					]);
-					break;
-				default:
-					appearance.skinColorHex = getRandomElement(skinColorWhite);
-			}
-			break;
-		case 'Hellbraun':
-			switch (appearance.randomRace) {
-				case 'Elf':
-				case 'Halbelf':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorLightBrownElf,
-						...skinColorLightBrown,
-					]);
-					break;
-				case 'Gnom':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorLightBrownGnome,
-						...skinColorLightBrown,
-					]);
-					break;
-				case 'Halbork':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorLightBrownOrc,
-						...skinColorLightBrown,
-					]);
-					break;
-				case 'Drachenblütiger':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorLightBrownDragonborn,
-						...skinColorLightBrown,
-					]);
-					break;
-				case 'Tiefling':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorLightBrownTiefling,
-						...skinColorLightBrown,
-					]);
-					break;
-				default:
-					appearance.skinColorHex = getRandomElement(skinColorLightBrown);
-			}
+		case 'Blau':
+			appearance.skinColorHex = getRandomElement(skinColorOtherBlue);
 			break;
 		case 'Braun':
-			switch (appearance.randomRace) {
-				case 'Elf':
-				case 'Halbelf':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBrownElf,
-						...skinColorBrown,
-					]);
-					break;
-				case 'Gnom':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBrownGnome,
-						...skinColorBrown,
-					]);
-					break;
-				case 'Halbork':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBrownOrc,
-						...skinColorBrown,
-					]);
-					break;
-				case 'Drachenblütiger':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBrownDragonborn,
-						...skinColorBrown,
-					]);
-					break;
-				case 'Tiefling':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBrownTiefling,
-						...skinColorBrown,
-					]);
-					break;
-				default:
-					appearance.skinColorHex = getRandomElement(skinColorBrown);
-			}
+			appearance.skinColorHex = getRandomElement(skinColorOtherBrown);
 			break;
-		case 'Dunkelbraun':
-			switch (appearance.randomRace) {
-				case 'Elf':
-				case 'Halbelf':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorDarkBrownElf,
-						...skinColorDarkBrown,
-					]);
-					break;
-				case 'Gnom':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorDarkBrownGnome,
-						...skinColorDarkBrown,
-					]);
-					break;
-				case 'Halbork':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorDarkBrownOrc,
-						...skinColorDarkBrown,
-					]);
-					break;
-				case 'Drachenblütiger':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorDarkBrownDragonborn,
-						...skinColorDarkBrown,
-					]);
-					break;
-				case 'Tiefling':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorDarkBrownTiefling,
-						...skinColorDarkBrown,
-					]);
-					break;
-				default:
-					appearance.skinColorHex = getRandomElement(skinColorDarkBrown);
-			}
+		case 'Grün':
+			appearance.skinColorHex = getRandomElement(skinColorOtherGreen);
 			break;
-		case 'Schwarz':
-			switch (appearance.randomRace) {
-				case 'Elf':
-				case 'Halbelf':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBlackElf,
-						...skinColorBlack,
-					]);
-					break;
-				case 'Gnom':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBlackGnome,
-						...skinColorBlack,
-					]);
-					break;
-				case 'Halbork':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBlackOrc,
-						...skinColorBlack,
-					]);
-					break;
-				case 'Drachenblütiger':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBlackDragonborn,
-						...skinColorBlack,
-					]);
-					break;
-				case 'Tiefling':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBlackTiefling,
-						...skinColorBlack,
-					]);
-					break;
-				default:
-					appearance.skinColorHex = getRandomElement(skinColorBlack);
-			}
+		case 'Messing':
+			appearance.skinColorHex = getRandomElement(skinColorOtherBrass);
+			break;
+		case 'Bronze':
+			appearance.skinColorHex = getRandomElement(skinColorOtherBronze);
+			break;
+		case 'Kupfer':
+			appearance.skinColorHex = getRandomElement(skinColorOtherCopper);
+			break;
+		case 'Silber':
+			appearance.skinColorHex = getRandomElement(skinColorOtherSilver);
+			break;
+		case 'Gold':
+			appearance.skinColorHex = getRandomElement(skinColorOtherGold);
+			break;
+		case 'Pink':
+			appearance.skinColorHex = getRandomElement(skinColorOtherPink);
+			break;
+		case 'Rot':
+			appearance.skinColorHex = getRandomElement(skinColorOtherRed);
+			break;
+		case 'Weiß':
+			appearance.skinColorHex = getRandomElement(skinColorOtherWhite);
+			break;
+		case 'Purpur':
+			appearance.skinColorHex = getRandomElement(skinColorOtherPurple);
+			break;
+		case 'Orange':
+			appearance.skinColorHex = getRandomElement(skinColorOtherOrange);
+			break;
+		case 'Gelb':
+			appearance.skinColorHex = getRandomElement(skinColorOtherYellow);
 			break;
 		default:
 			console.error('Ungültige Hautfarbe: ' + appearance.randomSkinColor);
 	}
 
 	//Augenfarbe
-	switch (appearance.randomEyeColor) {
-		case 'Blau':
-			appearance.eyeColorHex = getRandomElement(eyeColorBlue);
-			break;
-		case 'Grün':
-			appearance.eyeColorHex = getRandomElement(eyeColorGreen);
-			break;
-		case 'Grau':
-			appearance.eyeColorHex = getRandomElement(eyeColorGrey);
-			break;
-		case 'Braun':
-			appearance.eyeColorHex = getRandomElement(eyeColorBrown);
-			break;
-		case 'Haselnuss':
-			appearance.eyeColorHex = getRandomElement(eyeColorHazel);
-			break;
-		default:
-			console.error('Ungültige Augenfarbe: ' + appearance.randomEyeColor);
-	}
-
-	//Haarfarbe
-	switch (appearance.randomHairColor) {
-		case 'Blond':
-			appearance.hairColorHex = getRandomElement(hairColorBlonde);
-			break;
-		case 'Aschblond':
-			appearance.hairColorHex = getRandomElement(hairColorBlondeAsh);
-			break;
-		case 'Goldblond':
-			appearance.hairColorHex = getRandomElement(hairColorBlondeGold);
-			break;
-		case 'Rotblond':
-			appearance.hairColorHex = getRandomElement(hairColorBlondeStrawberry);
-			break;
-		case 'Staub':
-			appearance.hairColorHex = getRandomElement(hairColorDust);
-			break;
-		case 'Hellbraun':
-			appearance.hairColorHex = getRandomElement(hairColorLightBrown);
-			break;
-		case 'Braun':
-			appearance.hairColorHex = getRandomElement(hairColorBrown);
-			break;
-		case 'Dunkelbraun':
-			appearance.hairColorHex = getRandomElement(hairColorDarkBrown);
-			break;
-		case 'Rostrot':
-			appearance.hairColorHex = getRandomElement(hairColorBrownAuburn);
-			break;
-		case 'Rotbraun':
-			appearance.hairColorHex = getRandomElement(hairColorBrownRed);
-			break;
-		case 'Goldbraun':
-			appearance.hairColorHex = getRandomElement(hairColorBrownGold);
-			break;
-		case 'Fuchsrot':
-			appearance.hairColorHex = getRandomElement(hairColorGinger);
-			break;
-		case 'Schwarz':
-			appearance.hairColorHex = getRandomElement(hairColorBlack);
-			break;
-		case 'Weiß':
-			appearance.hairColorHex = getRandomElement(hairColorWhite);
-			break;
-		case 'Grau':
-			appearance.hairColorHex = getRandomElement(hairColorGrey);
-			break;
-		default:
-			console.error('Ungültige Haarfarbe: ' + appearance.randomHairColor);
-	}
-
-	//Haarstruktur
-	switch (appearance.randomHairStructure) {
-		case 'Glatt':
-			appearance.hairStructureDescription = getRandomElement(hairStructureType1);
-			break;
-		case 'Wellig':
-			appearance.hairStructureDescription = getRandomElement(hairStructureType2);
-			break;
-		case 'Lockig':
-			appearance.hairStructureDescription = getRandomElement(hairStructureType3);
-			break;
-		case 'Kraus':
-			appearance.hairStructureDescription = getRandomElement(hairStructureType4);
-			break;
-		default:
-			console.error('Ungültige Haarstruktur: ' + appearance.randomHairStructure);
-	}
-
+	// switch (appearance.randomEyeColor) {
+	// 	case 'Blau':
+	// 		appearance.eyeColorHex = getRandomElement(eyeColorBlue);
+	// 		break;
+	// 	case 'Grün':
+	// 		appearance.eyeColorHex = getRandomElement(eyeColorGreen);
+	// 		break;
+	// 	case 'Grau':
+	// 		appearance.eyeColorHex = getRandomElement(eyeColorGrey);
+	// 		break;
+	// 	case 'Braun':
+	// 		appearance.eyeColorHex = getRandomElement(eyeColorBrown);
+	// 		break;
+	// 	case 'Haselnuss':
+	// 		appearance.eyeColorHex = getRandomElement(eyeColorHazel);
+	// 		break;
+	// 	default:
+	// 		console.error('Ungültige Augenfarbe: ' + appearance.randomEyeColor);
+	// }
+	
 	return appearance;
 }

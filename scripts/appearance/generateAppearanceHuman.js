@@ -31,231 +31,26 @@ function generateAppearanceHuman(gender) {
 	appearance.randomEyeShape = getRandomEyeShape();
 	appearance.randomEarShape = getRandomEarShape();
 	appearance.randomMouthShape = getRandomMouthShape();
-	appearance.randomTieflingHornShape = getRandomElement(tieflingHornShapes);
 
 	// Hautfarbe
 	switch (appearance.randomSkinColor) {
 		case 'Blass':
-			switch (appearance.randomRace) {
-				case 'Elf':
-				case 'Halbelf':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorPaleElf,
-						...skinColorPale,
-					]);
-					break;
-				case 'Gnom':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorPaleGnome,
-						...skinColorPale,
-					]);
-					break;
-				case 'Halbork':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorPaleOrc,
-						...skinColorPale,
-					]);
-					break;
-				case 'Drachenblütiger':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorPaleDragonborn,
-						...skinColorPale,
-					]);
-					break;
-				case 'Tiefling':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorPaleTiefling,
-						...skinColorPale,
-					]);
-					break;
-				default:
-					appearance.skinColorHex = getRandomElement(skinColorPale);
-			}
+			appearance.skinColorHex = getRandomElement(skinColorPale);
 			break;
 		case 'Weiß':
-			switch (appearance.randomRace) {
-				case 'Elf':
-				case 'Halbelf':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorWhiteElf,
-						...skinColorWhite,
-					]);
-					break;
-				case 'Gnom':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorWhiteGnome,
-						...skinColorWhite,
-					]);
-					break;
-				case 'Halbork':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorWhiteOrc,
-						...skinColorWhite,
-					]);
-					break;
-				case 'Drachenblütiger':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorWhiteDragonborn,
-						...skinColorWhite,
-					]);
-					break;
-				case 'Tiefling':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorWhiteTiefling,
-						...skinColorWhite,
-					]);
-					break;
-				default:
-					appearance.skinColorHex = getRandomElement(skinColorWhite);
-			}
+			appearance.skinColorHex = getRandomElement(skinColorWhite);
 			break;
 		case 'Hellbraun':
-			switch (appearance.randomRace) {
-				case 'Elf':
-				case 'Halbelf':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorLightBrownElf,
-						...skinColorLightBrown,
-					]);
-					break;
-				case 'Gnom':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorLightBrownGnome,
-						...skinColorLightBrown,
-					]);
-					break;
-				case 'Halbork':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorLightBrownOrc,
-						...skinColorLightBrown,
-					]);
-					break;
-				case 'Drachenblütiger':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorLightBrownDragonborn,
-						...skinColorLightBrown,
-					]);
-					break;
-				case 'Tiefling':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorLightBrownTiefling,
-						...skinColorLightBrown,
-					]);
-					break;
-				default:
-					appearance.skinColorHex = getRandomElement(skinColorLightBrown);
-			}
+			appearance.skinColorHex = getRandomElement(skinColorLightBrown);
 			break;
 		case 'Braun':
-			switch (appearance.randomRace) {
-				case 'Elf':
-				case 'Halbelf':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBrownElf,
-						...skinColorBrown,
-					]);
-					break;
-				case 'Gnom':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBrownGnome,
-						...skinColorBrown,
-					]);
-					break;
-				case 'Halbork':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBrownOrc,
-						...skinColorBrown,
-					]);
-					break;
-				case 'Drachenblütiger':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBrownDragonborn,
-						...skinColorBrown,
-					]);
-					break;
-				case 'Tiefling':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBrownTiefling,
-						...skinColorBrown,
-					]);
-					break;
-				default:
-					appearance.skinColorHex = getRandomElement(skinColorBrown);
-			}
+			appearance.skinColorHex = getRandomElement(skinColorBrown);
 			break;
 		case 'Dunkelbraun':
-			switch (appearance.randomRace) {
-				case 'Elf':
-				case 'Halbelf':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorDarkBrownElf,
-						...skinColorDarkBrown,
-					]);
-					break;
-				case 'Gnom':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorDarkBrownGnome,
-						...skinColorDarkBrown,
-					]);
-					break;
-				case 'Halbork':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorDarkBrownOrc,
-						...skinColorDarkBrown,
-					]);
-					break;
-				case 'Drachenblütiger':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorDarkBrownDragonborn,
-						...skinColorDarkBrown,
-					]);
-					break;
-				case 'Tiefling':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorDarkBrownTiefling,
-						...skinColorDarkBrown,
-					]);
-					break;
-				default:
-					appearance.skinColorHex = getRandomElement(skinColorDarkBrown);
-			}
+			appearance.skinColorHex = getRandomElement(skinColorDarkBrown);
 			break;
 		case 'Schwarz':
-			switch (appearance.randomRace) {
-				case 'Elf':
-				case 'Halbelf':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBlackElf,
-						...skinColorBlack,
-					]);
-					break;
-				case 'Gnom':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBlackGnome,
-						...skinColorBlack,
-					]);
-					break;
-				case 'Halbork':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBlackOrc,
-						...skinColorBlack,
-					]);
-					break;
-				case 'Drachenblütiger':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBlackDragonborn,
-						...skinColorBlack,
-					]);
-					break;
-				case 'Tiefling':
-					appearance.skinColorHex = getRandomElement([
-						...skinColorBlackTiefling,
-						...skinColorBlack,
-					]);
-					break;
-				default:
-					appearance.skinColorHex = getRandomElement(skinColorBlack);
-			}
+			appearance.skinColorHex = getRandomElement(skinColorBlack);
 			break;
 		default:
 			console.error('Ungültige Hautfarbe: ' + appearance.randomSkinColor);

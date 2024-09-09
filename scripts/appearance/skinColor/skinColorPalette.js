@@ -48,7 +48,7 @@ const skinColorPaleGnome = [
 	'#B096A5',
 ];
 const skinColorPaleOrc = [];
-const skinColorPaleDragonborn = [];
+
 const skinColorPaleTiefling = [];
 
 // ### 2: Weiß
@@ -114,7 +114,6 @@ const skinColorWhiteOrc = [
 	'#C8C86D',
 	'#B5B55E',
 ];
-const skinColorWhiteDragonborn = [];
 const skinColorWhiteTiefling = [
 	'#D7BFBD',
 	'#B09B9A',
@@ -197,7 +196,6 @@ const skinColorLightBrownOrc = [
 	'#95954E',
 	'#7D7D40',
 ];
-const skinColorLightBrownDragonborn = [];
 const skinColorLightBrownTiefling = [
 	'#9A8281',
 	'#756464',
@@ -279,7 +277,6 @@ const skinColorBrownOrc = [
 	'#656531',
 	'#4B4B22',
 ];
-const skinColorBrownDragonborn = [];
 const skinColorBrownTiefling = [
 	'#655856',
 	'#534746',
@@ -339,7 +336,6 @@ const skinColorDarkBrownOrc = [
 	'#3C3934',
 	'#3B3B13',
 ];
-const skinColorDarkBrownDragonborn = [];
 const skinColorDarkBrownTiefling = [
 	'#4B3F3E',
 	'#863C0B',
@@ -391,7 +387,6 @@ const skinColorBlackOrc = [
 	'#302E2A',
 	'#29290C',
 ];
-const skinColorBlackDragonborn = [];
 const skinColorBlackTiefling = [
 	'#3A2E2E',
 	'#6E320B',
@@ -401,4 +396,228 @@ const skinColorBlackTiefling = [
 	'#572341',
 	'#232345',
 	'#2E3445',
+];
+
+// Andere Hautfarben
+const skinColorOtherBlack = [
+	'#717171',
+	'#6D6D6D',
+	'#696969',
+	'#636363',
+	'#5F5F5F',
+	'#5A5A5A',
+	'#555555',
+	'#4F4F4F',
+	'#474747',
+	'#383838',
+	'#2B2B2B',
+	'#1D1D1D',
+	'#1A1A1A',
+	'#151515',
+	'#000000',
+];
+const skinColorOtherBlue = [
+	'#72ACC8',
+	'#70A5C1',
+	'#6D9FB9',
+	'#3895B9',
+	'#3590B3',
+	'#328BAD',
+	'#2A809F',
+	'#267390',
+	'#1C657E',
+	'#165C73',
+	'#0D5368',
+	'#00475A',
+	'#003445',
+	'#00222E',
+	'#001C2A',
+	'#00121D',
+	'#000515',
+];
+const skinColorOtherBrown = [
+	'#B97738',
+	'#B37335',
+	'#AD6E32',
+	'#A66A2E',
+	'#9F662A',
+	'#976026',
+	'#905C26',
+	'#875522',
+	'#7E4F1C',
+	'#734916',
+	'#68400D',
+	'#5A3800',
+	'#402500',
+];
+const skinColorOtherPurple = [
+	'#CE80F0',
+	'#C67CE7',
+	'#BE77DE',
+	'#B672D5',
+	'#AD6DCA',
+	'#AA6CBB',
+	'#A66AAB',
+	'#9B60B4',
+	'#825399',
+	'#825298',
+	'#624273',
+	'#4B385A',
+];
+const skinColorOtherWhite = [
+	'#FFFFFF',
+	'#F8F8F8',
+	'#F1F1F1',
+	'#EAEAEA',
+	'#E2E2E2',
+	'#DADADA',
+	'#D1D1D1',
+	'#C8C8C8',
+	'#BEBEBE',
+	'#B4B4B4',
+	'#A8A8A8',
+	'#9C9C9C',
+	'#808080',
+];
+const skinColorOtherYellow = [
+	'#F9E955',
+	'#F4E351',
+	'#EEDC4D',
+	'#E9D649',
+	'#E3CE45',
+	'#DDC740',
+	'#D7BF3B',
+	'#D0B735',
+	'#CAAE2E',
+	'#C2A526',
+	'#BB9B1C',
+	'#B3900D',
+];
+const skinColorOtherOrange = [
+	'#F36C2A',
+	'#E16226',
+	'#D75D22',
+	'#CD5622',
+	'#C85424',
+	'#C2511C',
+	'#B5491C',
+	'#A84216',
+	'#993816',
+	'#882E0D',
+	'#731C0D',
+	'#5A0000',
+];
+const skinColorOtherPink = [
+	'#F098E0',
+	'#E893D8',
+	'#DE8CD0',
+	'#D586C7',
+	'#CA80BD',
+	'#BF78B2',
+	'#B471A7',
+	'#985F8D',
+	'#905A86',
+	'#87557E',
+	'#73476A',
+	'#5A3853',
+];
+const skinColorOtherRed = [
+	'#F40000',
+	'#EC0000',
+	'#D70000',
+	'#CD0000',
+	'#C20000',
+	'#BC0000',
+	'#B60000',
+	'#A80000',
+	'#9A0000',
+	'#880000',
+	'#750000',
+	'#5A0000',
+];
+const skinColorOtherGreen = [
+	'#38B962',
+	'#35B35F',
+	'#32AD5C',
+	'#2EA658',
+	'#2A9F55',
+	'#269751',
+	'#26904F',
+	'#22874B',
+	'#1C7E47',
+	'#167342',
+	'#0D683D',
+	'#005A38',
+	'#003A20',
+	'#002912',
+];
+const skinColorOtherGold = [
+	'#EFA540',
+	'#E69F3D',
+	'#DD993B',
+	'#D49235',
+	'#C98A32',
+	'#BE822E',
+	'#B27A2A',
+	'#A67126',
+	'#976622',
+	'#865A16',
+	'#734D0D',
+	'#5A3B00',
+];
+const skinColorOtherSilver = [
+	'#E2E2E2',
+	'#DADADA',
+	'#D1D1D1',
+	'#C8C8C8',
+	'#BFBFBF',
+	'#B4B4B4',
+	'#AAAAAA',
+	'#9D9D9D',
+	'#909090',
+	'#818181',
+	'#6E6E6E',
+	'#585858',
+];
+const skinColorOtherBronze = [
+	'#F7AD79',
+	'#EEA775',
+	'#E5A071',
+	'#DB996C',
+	'#D09168',
+	'#C58862',
+	'#B8805D',
+	'#AA7656',
+	'#9B6A51',
+	'#8A5D49',
+	'#754F42',
+	'#5A3B38',
+];
+const skinColorOtherBrass = [
+	'#F7E24B',
+	'#EED947',
+	'#E5D145',
+	'#DAC740',
+	'#D0BD3B',
+	'#C4B338',
+	'#B8A732',
+	'#AA9B2E',
+	'#9B8D26',
+	'#897D1C',
+	'#756A16',
+	'#5A5100',
+];
+const skinColorOtherCopper = [
+	'#F56938',
+	'#EC6535',
+	'#E35F32',
+	'#D95A2E',
+	'#CE552A',
+	'#C34F26',
+	'#B64726',
+	'#A94022',
+	'#9A381C',
+	'#892E16',
+	'#751C0D',
+	'#5A0000',
 ];
